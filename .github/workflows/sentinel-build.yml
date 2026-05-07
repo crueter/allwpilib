@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "15 3 * * Sat" # 11:15PM EST every Friday
+  push:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
